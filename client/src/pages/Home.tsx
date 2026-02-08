@@ -539,8 +539,10 @@ export default function Home() {
             </div>
 
             {/* Formulario de contacto */}
-            <form className="space-y-6 bg-gray-50 p-8 rounded-xl" onSubmit={handleFormSubmit} data-animate id="contact-form">
-              {formSubmitted && (
+            {/* Formulario de contacto corregido */}
+            <form className="space-y-6 bg-gray-50 p-8 rounded-xl" action="https://formspree.io/f/xovnqaeq" // Tu ID de Formspree
+             method="POST" data-animate id="contact-form"
+>              {formSubmitted && (
                 <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg animate-fade-in">
                   ✓ ¡Gracias! Tu mensaje ha sido enviado correctamente. Me pondré en contacto pronto.
                 </div>
@@ -600,12 +602,12 @@ export default function Home() {
               />
 
               <button
-                type="submit"
-                disabled={!isFormValid}
-                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+               type="submit"
+               className="w-full btn-primary"
+               >
                 Enviar Mensaje
               </button>
+
             </form>
           </div>
         </div>
