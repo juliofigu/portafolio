@@ -191,7 +191,7 @@ export default function Home() {
               {/* Estadísticas */}
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200" data-animate id="stats">
                 <div>
-                  <p className="text-2xl font-bold text-blue-600">5+</p>
+                  <p className="text-2xl font-bold text-blue-600">15+</p>
                   <p className="text-sm text-gray-600">Años de Experiencia</p>
                 </div>
                 <div>
@@ -381,40 +381,6 @@ export default function Home() {
                   Efectos y transiciones
                 </li>
               </ul>
-            </div>
-
-            {/* Tarjeta 7: Creacion de Web Profesional */}
-            <div className="service-card group" data-animate id="service-7">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
-                <Code className="text-blue-600 group-hover:text-white" size={24} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Creacion de Web Profesional</h3>
-              <p className="text-gray-600 mb-4">
-                Diseno y desarrollo de portafolios web modernos con tecnologia React. Responsive, rapido y optimizado para conversiones.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2">
-                  <ChevronRight size={16} className="text-blue-600" />
-                  React + Tailwind CSS
-                </li>
-                <li className="flex items-center gap-2">
-                  <ChevronRight size={16} className="text-blue-600" />
-                  Diseno Responsive
-                </li>
-                <li className="flex items-center gap-2">
-                  <ChevronRight size={16} className="text-blue-600" />
-                  SEO Optimizado
-                </li>
-              </ul>
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-xs text-gray-500 mb-3"><strong>Caso de Estudio:</strong> Este portafolio</p>
-                <a
-                  href="#inicio"
-                  className="inline-block px-3 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Ver Proyecto
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -616,7 +582,7 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">JulioFigueroa</h3>
+              <h3 className="text-xl font-bold mb-4">Julio</h3>
               <p className="text-gray-400">
                 Soluciones tecnológicas y digitales para tu éxito remoto.
               </p>
