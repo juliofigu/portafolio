@@ -1,13 +1,14 @@
-import { Router as WouterRouter, Route, Switch } from "wouter"; // Importa Router con un alias
-
-function Router() {
+function App() {
   return (
-    <WouterRouter base="/portafolio">
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/404" component={NotFound} />
-        <Route component={NotFound} />
-      </Switch>
-    </WouterRouter>
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
+
+export default App; // <--- ESTA ES LA LÍNEA QUE FALTA
