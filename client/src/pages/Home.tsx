@@ -455,7 +455,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                "Mi computadora,'Maigualida,' estaba tan lenta que era imposible trabajar. Julio le devolvió la vida, optimizó todo el sistema y ahora funciona más rápido que nunca. Un servicio excepcional."
+                "Mi computadora,'Maigualida', estaba tan lenta que era imposible trabajar. Julio le devolvió la vida, optimizó todo el sistema y ahora funciona más rápido que nunca. Un servicio excepcional."
               </p>
               <p className="font-semibold text-gray-900">Isaelia Rojas</p>
               <p className="text-sm text-gray-600">Buenos Aires, Argentina</p>
