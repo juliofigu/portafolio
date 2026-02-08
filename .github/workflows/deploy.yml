@@ -19,11 +19,14 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        # Usamos --force para ignorar conflictos de parches y dependencias
         run: npm install --force
 
       - name: Build project
         run: npm run build
+
+      - name: Fix for GitHub Pages Routing
+        # Este comando copia el index.html y lo nombra 404.html para que el refresco funcione
+        run: cp dist/public/index.html dist/public/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
