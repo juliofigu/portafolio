@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # O la rama principal de tu repositorio
+      - main
 
 jobs:
   build-and-deploy:
@@ -13,24 +13,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm install # O pnpm install si usas pnpm
+        # Usamos --no-frozen-lockfile para evitar errores de sincronización
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build project
-        run: npm run build # Este comando ejecutará el script de build de tu package.json
+        run: pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public # La carpeta donde Vite genera los archivos de salida
-          # Si tu repositorio es de tipo usuario/organización (ej. juliofigu.github.io),
-          # entonces publish_branch debe ser main o master.
-          # Si es un repositorio de proyecto (ej. juliofigu.github.io/portafolio),
-          # entonces publish_branch debe ser gh-pages.
+          publish_dir: ./dist/public
           publish_branch: gh-pages
