@@ -191,7 +191,7 @@ export default function Home() {
               {/* Estadísticas */}
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200" data-animate id="stats">
                 <div>
-                  <p className="text-2xl font-bold text-blue-600">5+</p>
+                  <p className="text-2xl font-bold text-blue-600">15+</p>
                   <p className="text-sm text-gray-600">Años de Experiencia</p>
                 </div>
                 <div>
@@ -210,7 +210,7 @@ export default function Home() {
               <div className="relative w-full max-w-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-2xl blur-2xl opacity-20"></div>
                 <img
-                  src="/julio-photo.png"
+                  src="/JulioF_remove.png"
                   alt="Julio - Experto en Soluciones Tecnológicas"
                   className="relative w-full rounded-2xl shadow-2xl object-cover"
                 />
