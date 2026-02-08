@@ -13,23 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: 'pnpm'
 
       - name: Install dependencies
-        # Usamos --no-frozen-lockfile para evitar errores de sincronización
-        run: pnpm install --no-frozen-lockfile
+        # Usamos --force para ignorar conflictos de parches y dependencias
+        run: npm install --force
 
       - name: Build project
-        run: pnpm run build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
