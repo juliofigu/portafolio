@@ -210,7 +210,7 @@ export default function Home() {
               <div className="relative w-full max-w-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-2xl blur-2xl opacity-20"></div>
                 <img
-                  src="/JulioF_remove.png"
+                  src="./JulioF_remove.png"
                   alt="Julio - Experto en Soluciones Tecnológicas"
                   className="relative w-full rounded-2xl shadow-2xl object-cover"
                 />
@@ -507,15 +507,19 @@ export default function Home() {
 
             {/* Información de contacto */}
             <div className="grid md:grid-cols-3 gap-6 mb-12" data-animate id="contact-info">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="text-blue-600" size={24} />
-                </div>
+              <div className="text-center px-2"> {/* Añadimos un pequeño margen lateral con px-2 */}
+               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+               <Mail className="text-blue-600" size={24} />
+               </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                <a href="mailto:ingresosconstantesimparables@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium">
-                  ingresosconstantesimparables@gmail.com
+                <a 
+                href="mailto:ingresosconstantesimparables@gmail.com" 
+                className="text-blue-600 hover:text-blue-700 font-medium break-all block" // Añadimos 'break-all' y 'block'
+                >
+                ingresosconstantesimparables@gmail.com
                 </a>
               </div>
+
 
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
